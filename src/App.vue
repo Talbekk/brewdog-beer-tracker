@@ -13,7 +13,8 @@ export default {
   name:'app',
   data() {
     return {
-      beers: []
+      beers: [],
+      selectedBeer: null
     }
   },
   mounted(){

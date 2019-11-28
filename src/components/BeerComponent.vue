@@ -1,12 +1,17 @@
 <template lang="html">
-  <li>{{beer.name}}</li>
+  <li v-on:click="grabABeer">{{beer.name}}</li>
 </template>
 
 <script>
 
 export default {
   name: 'beer-component',
-  props: ['beer']
+  props: ['beer'],
+  methods: {
+    grabABeer() {
+      console.log(this.beer);
+    }
+  }
 }
 </script>
 
