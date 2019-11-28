@@ -1,9 +1,17 @@
 <template lang="html">
 
 <div>
-  <beers-list :beers='beers'></beers-list>
-  <beer-label :beer='selectedBeer'></beer-label>
+  <header>
+    <section id="header-left">
+    <img src='/abv-logo.svg'>
+    <button type="button" v-on:click="favoriteFilter = !favoriteFilter">{{ favoriteFilter ? "Show All" : "Show Favorites" }}</button>
+  </section>
+      <beer-label :beer='selectedBeer'></beer-label>
+  </header>
+  <beers-list :beers='beers' :favoriteFilter='favoriteFilter'></beers-list>
 </div>
+
+
 </template>
 
 <script>
@@ -17,7 +25,8 @@ export default {
   data() {
     return {
       beers: [],
-      selectedBeer: null
+      selectedBeer: null,
+      favoriteFilter: false
     }
   },
   mounted(){
@@ -37,4 +46,26 @@ export default {
 </script>
 
 <style lang="css" scoped>
+body {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+}
+header img {
+  max-width: 10em;
+}
+#header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#beer-label {
+
+}
 </style>
