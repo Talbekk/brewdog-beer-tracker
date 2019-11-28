@@ -50,15 +50,16 @@ li {
   max-width: 40%;
   border: 2px solid #669999;
   border-radius: 2%;
+  flex-grow: 1;
 }
 
-.article.top {
+.article-top {
   border: 1px dotted #ccc;
   display: flex;
   flex-direction: row;
 }
 
-.article.bottom {
+.article-bottom {
   border: 1px dotted #ccc;
   display: flex;
   flex-direction: row-reverse;
