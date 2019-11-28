@@ -1,7 +1,7 @@
 <template lang="html">
 
 <div>
-  <beers-list :beers='beers'/>
+  <beers-list :beers='beers'></beers-list>
 </div>
 </template>
 
