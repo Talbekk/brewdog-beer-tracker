@@ -3,13 +3,14 @@
 </template>
 
 <script>
+import {eventBus} from '../main.js'
 
 export default {
   name: 'beer-component',
   props: ['beer'],
   methods: {
     grabABeer() {
-      console.log(this.beer);
+      eventBus.$emit('beer-in-hand', this.beer);
     }
   }
 }

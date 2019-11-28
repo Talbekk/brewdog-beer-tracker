@@ -8,6 +8,7 @@
 <script>
 
 import BeersList from './components/BeersList.vue';
+import {eventBus} from './main.js';
 
 export default {
   name:'app',
@@ -21,6 +22,10 @@ export default {
     fetch('https://api.punkapi.com/v2/beers')
     .then(response => response.json())
     .then(beers => this.beers = beers)
+
+  eventBus.$on('beer-in-hand', (beer) => {
+    this.selectedBeer = beer
+  })
   },
   components: {
     "beers-list": BeersList
