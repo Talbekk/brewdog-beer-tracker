@@ -5,7 +5,7 @@
   <p>First Brewing: {{beer.first_brewed}}</p>
   <p>Description: {{beer.description}}</p>
   <p>ABV: {{beer.abv}}%</p>
-  <img class="label-pic" :src="beer.image_url"/>
+  <img class="beer-icon" :src="beer.image_url"/>
 </div>
 </template>
 
@@ -17,4 +17,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.beer-icon {
+  max-width: 3em;
+}
 </style>
