@@ -2,12 +2,14 @@
 
 <div>
   <beers-list :beers='beers'></beers-list>
+  <beer-label :beer='selectedBeer'></beer-label>
 </div>
 </template>
 
 <script>
 
 import BeersList from './components/BeersList.vue';
+import BeerLabel from './components/BeerLabel.vue';
 import {eventBus} from './main.js';
 
 export default {
@@ -28,7 +30,8 @@ export default {
   })
   },
   components: {
-    "beers-list": BeersList
+    "beers-list": BeersList,
+    "beer-label": BeerLabel
   }
 }
 </script>
