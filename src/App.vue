@@ -57,12 +57,25 @@ header {
 }
 header img {
   max-width: 10em;
+  max-height: 10em;
+}
+
+button {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 #header-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 #beer-label {
